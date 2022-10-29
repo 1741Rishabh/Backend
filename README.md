@@ -50,3 +50,109 @@ Web hosting is a service where you place your website and files on the hosting c
 
 
 
+
+# Question
+
+Is the following statement true or false? The payload part of IP packets supports multiple protocols to make sure that information arrives as expected. Two of these are Transmission Control Protocol (TCP) and User Datagram Protocol (UDP). UDP is used to send data that must arrive correctly and in order.
+
+# Correct
+That is correct! TCP is used for data that must arrive correctly and in order. This is because TCP can deal with data packets arriving out of order, becoming damaged or corrupted, or dropped or lost albeit at the cost of a small delay.
+
+# Introduction to Internet Protocols
+![Logo](/SS/ss2.jpg)
+![Logo](/SS/ss3.jpg)
+When you send data between computers across the internet, a common way of understanding that data is needed by the computers and networks that the data travels across. What makes that possible is the Internet Protocol. Version four and version six are currently the two most widely used standards of internet protocol (IP).Think of the old fashioned postal system again when you send a letter to a friend you need their address otherwise they won't receive your letter. Computers work in a similar way. Every computer on a network is assigned an IP address.`In protocol version four an IP address contains four octet. It's separated by periods or dots. For example 192.0.2.235. In protocol version six. An IP address contains eight groups of hexadecimal digits separated by a colon. For example 4527:0a00:1567:0200:ff00:0042:8329.`. When you send data across a network, you send the data as a series of messages called IP packets. Also known as data grams at a high level IP packets contain a header and a payload or the data. Think of that old fashioned postal system again, when you send a letter. You not only include the recipient's address but also your own address in case a return location is needed. IP packets are the same. They include the destination IP address and source IP address. These addresses are in the header along with some additional information to help deliver the packet. And the payload contains the data of the packet and some of the other protocols.
+Things can go wrong with the postal system. When sending multiple letters to a friend it's possible they may arrive out of order. It's possible that a package will get damaged or if you're really unlucky a letter could get lost.`These issues can happen to IP packets too they can arrive out of order, become damaged or corrupted to in transit or be dropped or lost during transit. To solve these problems, the payload part of the packets contains other protocols too. You can think of them as another message inside the payload of the IP packet`The two most common protocols are the Transmission Control Protocol referred to as `TCP` and the User Datagram Protocol, also known as `UDP`. TCP can solve all three of the previously mentioned issues but at the cost of a small delay when sending the data. This protocol is used for sending the data that must arrive correctly and in order such as a text or image files.UDP solves the corrupt packet issue but packets can still arrive out of order or not arrive at all. This protocol is used for sending data that can tolerate some data loss such as voice calls or live video streaming. Both of these protocols contain payloads that contain further protocols inside of them and there you have it.
+# Introduction to HTTP
+![Logo](/SS/ss3.jpg)
+HTTP is a core operational protocol of the world wide web. It is what enables your web browser to communicate with a web server that hosts a website. HTTP is the communication protocol you use whenever you browse the web. HTTP stands for Hypertext Transfer Protocol is a protocol used for transferring web resources such as HTML documents, images, styles, and other files. HTTP is a request response based protocol. A web browser or client sends an HTTP request to a server, and the webserver sends the HTTP response back to the browser
+
+# HTTP examples
+This reading explores the contents of HTTP requests and responses in more depth.
+
+### Request Line
+Every HTTP request begins with the request line.
+
+This consists of the HTTP method, the requested resource and the HTTP protocol version.
+
+`GET /home.html HTTP/1.1 `
+
+In this example,   `GET` is the HTTP method, `/home.html` is the resource requested and HTTP 1.1 is the protocol used.
+
+### HTTP Methods
+HTTP methods indicate the action that the client wishes to perform on the web server resource.
+
+Common HTTP methods are:
+|HTTP Method    | Description      | 
+| ------------- | ------------- | 
+| GET          | The client requests a resource on the web server.         | 
+| POST           | The client submits data to a resource on the web server.         | 
+| PUT           | The client replaces a resource on the web server.server.         | 
+| DELETE           | The client deletes a resource on the web server.server.         | 
+
+# HTTP Request Headers
+After the request line, the HTTP headers are followed by a line break.
+
+There are various possibilities when including an HTTP header in the HTTP request. A header is a case-insensitive name followed by a: and then followed by a value.
+
+Common headers are:
+```` Host: example.com​
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en​
+Content-type: text/json 
+````
+- The Host header specifies the host of the server and indicates where the resource is requested from.
+
+- The User-Agent header informs the web server of the application that is making the request. It often includes the operating system (Windows, Mac, Linux), version and application vendor.
+
+- The Accept header informs the web server what type of content the client will accept as the response.
+
+- The Accept-Language header indicates the language and optionally the locale that the client prefers.
+
+- The Content-type header indicates the type of content being transmitted in the request body.
+
+# HTTP Request Body
+HTTP requests can optionally include a request body. A request body is often included when using the HTTP POST and PUT methods to transmit data.
+
+````POST /users HTTP/1.1​
+Host: example.com​
+
+{
+ "key1":"value1",​
+ "key2":"value2",​
+ "array1":["value3","value4"]
+}
+````
+````
+PUT /users/1 HTTP/1.1
+Host: example.com
+Content-type: text/json
+
+{"key1":"value1"}
+````
+### `HTTP Responses`
+When the web server is finished processing the HTTP request, it will send back an HTTP response.
+
+The first line of the response is the status line. This line shows the client if the request was successful or if an error occurred.
+### `HTTP/1.1 200 OK​ `
+The line begins with the HTTP protocol version, followed by the status code and a reason phrase. The reason phrase is a textual representation of the status code.
+### `HTTP Status Codes`
+The first digit of an HTTP status code indicates the category of the response: Information, Successful, Redirection, Client Error or Server Error.
+
+The common status codes you'll encounter for each category are:
+
+ `1XX Informational`
+| Status Code     | Reason Phrase | Description     |
+| ------------- | ------------- | -------- |
+| 100          | Continue         | The server received the request headers and should continue to send the request body.  |
+| 101           | Switching Protocols         | The client has requested the server to switch protocols and the server has agreed to do so.  |
+
+`2XX Successful`
+| Status Code     | Reason Phrase | Description     |
+| ------------- | ------------- | -------- |
+| 200          | OK         | Standard response returned by the server to indicate it successfully processed the request. |
+| 201           | Created         | The server successfully processed the request and a resource was created.  |
+| 202          | Accepted         | The server accepted the request for processing but the processing has not yet been completed. |
+| 204           | No Content        |  The server successfully processed the request but is not returning any content. |
+
