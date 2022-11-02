@@ -1,6 +1,6 @@
 # Backend
 
-### topics Are 
+
 | MODULE             | Topic Name                 |
 | :---: | :---:  |
 | 1 | How the internet works |
@@ -257,6 +257,25 @@ print(say_hello())
  
 
 - Inline comments   `x = 1  # Resetting buffer size`
+
+## Variables
+````
+INPUT               OUTPUT
+a = 10          |   
+print(a)        |   10
+a = 5           |
+print(a)        |   5
+del a           |
+print(a)        |   print(a)
+                |         ^
+                |    NameError: name 'a' is not defined
+
+````
+
+## DATA TYPE
+
+![Logo](/pythonSS/dataTypes.jpg)
+
 
 
 

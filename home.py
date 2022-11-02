@@ -1,3 +1,6 @@
-def say_hello(): print("Hello there!")
-
-print(say_hello())
+a = 10
+print(a)
+a = 5
+print(a)
+del a
+print(a)
