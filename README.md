@@ -1,19 +1,49 @@
-
 # Backend
+
+### topics Are 
+| MODULE             | Topic Name                 |
+| :---: | :---:  |
+| 1 | How the internet works |
+|| Server ||
+|| What is a web server and how does it work ||
+|| What are websites and webpages ||
+|| What is a web browser and how does it work ||
+|| Web hosting ||
+|| Introduction to Internet Protocols||
+|| Introduction to HTTP||
+|| HTTP Methods||
+|| HTTP Request Headers ||
+|| HTTP Status Codes ||
+| 2 | Python |
+|| How is Python used in the real world?||
+|| Introduction to Programming ||
+|| Python syntax, spaces matter ||
+|| Commenting code ||
+
+
+
+
+
+
+
+
+
+
+
 
  The [backend](https://www.geeksforgeeks.org/frontend-vs-backend/) is the server-side of the website. It stores and arranges data, and also makes sure everything on the client-side of the website works fine. It is the part of the website that you cannot see and interact with. It is the portion of software that does not come in direct contact with the users. The parts and characteristics developed by backend designers are indirectly accessed by users through a front-end application. Activities, like writing APIs, creating libraries, and working with system components without user interfaces or even systems of scientific programming, are also included in the backend.
 # How the internet works
 You open your favorite app on your device and you're instantly connected to the world. This is all made possible because two devices connect and communicate via a wired or wireless connection, forming something called a network. You can connect multiple devices to this network. But this becomes very complicated very quickly, as each device needs to connect to every other device to communicate effectively. This problem is solved by something called a network switch that connects multiple devices and allows them to communicate with each other. The network switch can connect to other network switches, and now two networks can connect. These network switches then connect to more network switches until you have something called an interconnected network. This interconnected network has another name that you might be familiar with. It's called the Internet
 
-# Server
+## Server
 When we use websites or video streaming services on the Internet, these are provided by computers called servers.Our devices are called clients. This is known as the client-server model.  Internet connects the entire world. Have you ever had a video call with someone on another continent? That video data travel through large undersea cables connecting the world's networks. These cables can transfer huge volumes of data per second. There are a lot more technical details that go into making the Internet possible. But this is the main idea
 
-# What is a web server and how does it work
+## What is a web server and how does it work
 A server is a computer that runs applications and services ranging from websites to instant messaging. It's called a server because it provides a service to another computer and its user also known as the client. Is typically stored in something called a data center with hundreds or thousands of other servers, all running different services connected to the internet. There are many different systems in data centers to ensure that servers have continuous power, continuous internet connection and are kept called 24 hours per day. Did you know that there are data centers located all around the world. Many websites use these to allow you to access your content quickly from the data center nearest to you. The data center servers are built based on the service purpose. For example, if the server is only to be used for storing images, it might have a lot of hard drive space. Whereas a server computing complex calculations might need a fast processor and a lot of memory. This is usually referred to as a server hardware. The physical components of a server. Once the server hardware is installed in the data center, a piece of code can now run. The code that runs on the hardware is commonly known as software. One way I like to remember this is to think of hardware as something you can physically touch and is difficult to change as you need to physically replace components. Software is soft or easy to change. You just replace the code running on the server. `A web server has many functions which includes website storage and administration, data storage, security and managing email. Another primary function is to handle something known as a web request. When you open a browser on your device and type the name of the website, it's the job of the web server to send you back to that website's content. This process is known as the request response cycle. Web servers are also designed to respond to thousands of requests from clients per second.`
 
-# What are websites and webpages
+## What are websites and webpages
 A web page is a document that displays images, texts, videos and other content in the web browser, a website is a collection of webpages that link together.you can open and edit with any text editor, but developers usually use more sophisticated tools for working with webpages. If you want to work with a webpage, you need to know about three technologies and understand how they interact, their HTML, CSS and JavaScript. HTML structures the content you see, CSS controls the colors and style and JavaScript is responsible for the user interaction.HTML stands for hypertext markup language, it works by using something called markup tags. These tags describe the content that is displayed in the browser window, this content can be things like headings, paragraphs, images and even multimedia elements such as audio and video, the way html describes the content is known as markup. CSS is short for cascading style sheets and adds visual enhancements like colors and layout to the web page, this is commonly known as styling.JavaScript provides web developers with tools for interactivity, data processing, control and action. Have you ever tried to log to a website only to be told that the information you provided was incorrect or browse your favorite video streaming site and seen content update in real time? Well, that's JavaScript in action, JavaScript is the powerhouse of a web page. It has the ability to manipulate the content that you see on the screen as you interact with it. In fact, without JavaScript websites would be kind of boring and very limited in terms of what you can do, okay, you now know about the essential technologies of web page contains.`But how exactly does this code get translated to display the content that you see on your screen? When a copy of that webpage is sent from the web server to your browser, each line of code is processed in sequential order from first to last. As each line is interpreted, the browser creates the building blocks, which is the visual representation you see on the screen. This creation process is known as page rendering, the response from the web server must be a complete web page in order to fulfill the request, to show the page in the browser. `
-# What is a web browser and how does it work
+## What is a web browser and how does it work
 ![Logo](/SS/SS1.png)
 
 
@@ -24,7 +54,7 @@ let me demonstrate this using an example many of us are familiar with, searching
 
 
 
-# Web hosting
+## Web hosting
 Web hosting is a service where you place your website and files on the hosting companies web server. You're essentially renting the space in return for stable and secure storage. You don't need to be accompanied to use a web host. Individuals can rent space too.
 - shared hosting
 - virtual private hosting
@@ -51,23 +81,23 @@ Web hosting is a service where you place your website and files on the hosting c
 
 
 
-# Question
+## Question
 
 Is the following statement true or false? The payload part of IP packets supports multiple protocols to make sure that information arrives as expected. Two of these are Transmission Control Protocol (TCP) and User Datagram Protocol (UDP). UDP is used to send data that must arrive correctly and in order.
 
-# Correct
+## Correct
 That is correct! TCP is used for data that must arrive correctly and in order. This is because TCP can deal with data packets arriving out of order, becoming damaged or corrupted, or dropped or lost albeit at the cost of a small delay.
 
-# Introduction to Internet Protocols
+## Introduction to Internet Protocols
 ![Logo](/SS/ss2.JPG)
 ![Logo](/SS/ss3.JPG)
 When you send data between computers across the internet, a common way of understanding that data is needed by the computers and networks that the data travels across. What makes that possible is the Internet Protocol. Version four and version six are currently the two most widely used standards of internet protocol (IP).Think of the old fashioned postal system again when you send a letter to a friend you need their address otherwise they won't receive your letter. Computers work in a similar way. Every computer on a network is assigned an IP address.`In protocol version four an IP address contains four octet. It's separated by periods or dots. For example 192.0.2.235. In protocol version six. An IP address contains eight groups of hexadecimal digits separated by a colon. For example 4527:0a00:1567:0200:ff00:0042:8329.`. When you send data across a network, you send the data as a series of messages called IP packets. Also known as data grams at a high level IP packets contain a header and a payload or the data. Think of that old fashioned postal system again, when you send a letter. You not only include the recipient's address but also your own address in case a return location is needed. IP packets are the same. They include the destination IP address and source IP address. These addresses are in the header along with some additional information to help deliver the packet. And the payload contains the data of the packet and some of the other protocols.
 Things can go wrong with the postal system. When sending multiple letters to a friend it's possible they may arrive out of order. It's possible that a package will get damaged or if you're really unlucky a letter could get lost.`These issues can happen to IP packets too they can arrive out of order, become damaged or corrupted to in transit or be dropped or lost during transit. To solve these problems, the payload part of the packets contains other protocols too. You can think of them as another message inside the payload of the IP packet`The two most common protocols are the Transmission Control Protocol referred to as `TCP` and the User Datagram Protocol, also known as `UDP`. TCP can solve all three of the previously mentioned issues but at the cost of a small delay when sending the data. This protocol is used for sending the data that must arrive correctly and in order such as a text or image files.UDP solves the corrupt packet issue but packets can still arrive out of order or not arrive at all. This protocol is used for sending data that can tolerate some data loss such as voice calls or live video streaming. Both of these protocols contain payloads that contain further protocols inside of them and there you have it.
-# Introduction to HTTP
+## Introduction to HTTP
 ![Logo](SS/ss3.JPG)
 HTTP is a core operational protocol of the world wide web. It is what enables your web browser to communicate with a web server that hosts a website. HTTP is the communication protocol you use whenever you browse the web. HTTP stands for Hypertext Transfer Protocol is a protocol used for transferring web resources such as HTML documents, images, styles, and other files. HTTP is a request response based protocol. A web browser or client sends an HTTP request to a server, and the webserver sends the HTTP response back to the browser
 
-# HTTP examples
+## HTTP examples
 This reading explores the contents of HTTP requests and responses in more depth.
 
 ### Request Line
@@ -90,7 +120,7 @@ Common HTTP methods are:
 | PUT           | The client replaces a resource on the web server.server.         | 
 | DELETE           | The client deletes a resource on the web server.server.         | 
 
-# HTTP Request Headers
+## HTTP Request Headers
 After the request line, the HTTP headers are followed by a line break.
 
 There are various possibilities when including an HTTP header in the HTTP request. A header is a case-insensitive name followed by a: and then followed by a value.
@@ -112,7 +142,7 @@ Content-type: text/json
 
 - The Content-type header indicates the type of content being transmitted in the request body.
 
-# HTTP Request Body
+## HTTP Request Body
 HTTP requests can optionally include a request body. A request body is often included when using the HTTP POST and PUT methods to transmit data.
 
 ````POST /users HTTP/1.1​
@@ -161,3 +191,80 @@ The common status codes you'll encounter for each category are:
 | ------------- | ------------- | -------- |
 | 100          | Continue         | The server received the request headers and should continue to send the request body.  |
 | 101           | Switching Protocols         | The client has requested the server to switch protocols and the server has agreed to do so.  |
+
+
+
+
+
+
+
+
+
+
+# Python
+
+## How is Python used in the real world?
+Python is such an ubiquitous language that you've likely used it, regardless of whether or not you know you've used it. Python is  used for TensorFlow, which is a machine learning framework that Airbnb uses to classify images, and some healthcare companies used to classify MRI data. At Meta, Python is used for the Instagram back end, it is used for ads machine learning algorithms. It is also used for production engineers who keep our services alive and running.
+
+## Introduction to Programming
+Computers only understand binary code, which consists of two digits 0 and 1. This may seem quite strange at first, but with a little explanation, it will all make sense. 0 and 1 relate to different electrical states similar to a light switch, 0 is equal to off and 1 is equal to on.For example, in programming when you calculate numbers, cost or any arithmetic, you've mostly used decimal numbers. Every program written needs to be converted to binary code or machine code. An example of decibel to binary conversion is Decimal one is binary one decimal two is binary 10, Decimal three is binary 1, 1 and so on. Computer represents the binary code by using tiny electrical conductors called transistors. These transistors are housed inside the central processing unit. CPU, which is essentially the brain of the computer.
+
+When a program is written using any type of language it needs to be compiled or interpreted. The outcome is to turn readable programming code for us into readable programming code for the computer.
+`programming is the ability to provide a computer with a set of instructions in a particular language that it can understand and perform those operations or tasks. In other words, you need to tell the computer what you wanted to do in a format and language`
+
+Python was created by Guido van Rossum and released in 1991.
+
+## Python syntax, spaces matter
+
+````
+Example of Spacing
+
+code      |    code 
+X = 1+3   |    X = 1+3 \
++2        |    +2 
+print(X)  |    print(X)
+````
+````
+output    |   output
+4         |   6
+````
+
+````
+Example of Indentation
+
+def say_hello():
+    print("Hello there!")
+
+print(say_hello())
+````
+````
+Example of Indentation
+
+def say_hello(): print("Hello there!")
+
+print(say_hello())
+````
+## Commenting code
+- Single-line comments    `Ex # Don't try to Run Me, I'm a comment`
+
+- Multi-line comments    `Python does not really have a method of declaring multiline comments so a  #  symbol can be used at the beginning of every line of the comment.`
+  ````
+  # The function below accepts two integers and
+  # adds both numbers to return the value.
+  def add_two_numbers(a, b):
+      return a + b
+  ````
+ 
+
+- Inline comments   `x = 1  # Resetting buffer size`
+
+
+
+
+
+
+
+
+
+
+
