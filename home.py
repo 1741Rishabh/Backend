@@ -1,6 +1,6 @@
-a = 10
-print(a)
-a = 5
-print(a)
-del a
-print(a)
+x = 5.5
+y= 5.5
+sum = x+y
+print("sum of two no is ",sum)
+
+## User input, console output
