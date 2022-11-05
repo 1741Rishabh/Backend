@@ -350,6 +350,207 @@ def say_hello(you):
     return "Hello " +  you
 ````
 
+## Type casting
+````
+# Casting = Specify a type on to a variable.
+# Strings
+x = str("s1") # x will be 's1'
+y = str(2)    # y will be '2'
+z = str(3.0)  # z will be '3.0'
+# Ints
+x = int(1)   # x will be 1
+y = int(2.8) # y will be 2
+z = int("3") # z will be 3
+# Floats
+x = float(1)     # x will be 1.0
+````
+
+
+## User input, console output
+
+````
+# How to print in Python
+print("Hello World!")
+# How to print multiple words using comma separator
+print("Hi", "there")
+# How to separate the objects if there is more than one.
+print("Chelsea","Liverpool", sep="-vs-")
+#Specify what to print at the end. Default is '\n'
+print("Hello World",end="!") 
+# or use empty string "" for no new line
+print("Hello World",end="")
+````
+## control flow 
+control flow are of `Conditional`,`Loops` and `match statement` types
+### if/else
+````
+# How conditions work
+if condition:
+	# if condition met
+	# code here
+elif condition2: # (else if) checked if the first condition is false
+  	# if condition2 met
+    # code here
+elif condition3: # elif can be chained
+    # if condition3 met
+	# code here
+else:
+  	# if none of the conditions are met
+    # code here
+
+    
+# example
+
+if name == "bob": # ex. a == b (is a equal to b)
+    print("the wifi password is 1234")
+    
+elif name == "jake": # if the first condition is not met python checks this one
+    print("the secret formula is under the bed")
+
+else: # if none of the conditions are met
+    print("sorry i don't know who you are")
+
+    
+# Other Example
+if age >= 18:
+    print('You can go in')
+else:
+    print('you cannot pass, you are underage')
+````
+
+## loops in python
+There are two types of loops in Python, for and while.
+
+### While Loop in Python
+````
+# Python program to illustrate
+# while loop
+count = 0
+while (count < 3):
+	count = count + 1
+	print("Hello Geek")
+````
+### Using else statement with while loops
+````
+# Python program to illustrate
+# combining else with while
+count = 0
+while (count < 3):
+	count = count + 1
+	print("Hello Geek")
+else:
+	print("In Else Block")
+````
+
+## For Loop in Python
+````
+for iterator_var in sequence:
+    statements(s)
+
+# Python program to illustrate
+# Iterating over range 0 to n-1
+
+n = 4
+for i in range(0, n):
+	print(i)
+````
+````
+# Python program to illustrate
+# Iterating over a list
+print("List Iteration")
+l = ["geeks", "for", "geeks"]
+for i in l:
+	print(i)
+
+# Iterating over a tuple (immutable)
+print("\nTuple Iteration")
+t = ("geeks", "for", "geeks")
+for i in t:
+	print(i)
+
+# Iterating over a String
+print("\nString Iteration")
+s = "Geeks"
+for i in s:
+	print(i)
+
+# Iterating over dictionary
+print("\nDictionary Iteration")
+d = dict()
+d['xyz'] = 123
+d['abc'] = 345
+for i in d:
+	print("%s %d" % (i, d[i]))
+
+# Iterating over a set
+print("\nSet Iteration")
+set1 = {1, 2, 3, 4, 5, 6}
+for i in set1:
+	print(i),
+
+````
+
+````
+solution
+List Iteration
+geeks
+for
+geeks
+
+Tuple Iteration
+geeks
+for
+geeks
+
+String Iteration
+G
+e
+e
+k
+s
+
+Dictionary Iteration
+xyz  123
+abc  345
+````
+## Nested Loops
+Syntax: 
+
+````
+for iterator_var in sequence:
+   for iterator_var in sequence:
+       statements(s)
+       statements(s)
+
+while expression:
+   while expression: 
+       statement(s)
+       statement(s)
+````
+
+### Continue Statement:
+### Break Statement: 
+### Pass Statement:
+
+## Match statement
+````
+# _ is the symbol for wildcard
+match value:
+  case Case1:
+    ...
+  case Case2:
+    ...
+  case (5, _): # if value is some tuple with first element 5
+    ...
+  case _: # you can implement a fall-through like this
+    ...
+````
+
+
+
+
+
+
 
 
 

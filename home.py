@@ -1,6 +1,4 @@
-x = 5.5
-y= 5.5
-sum = x+y
-print("sum of two no is ",sum)
-
-## User input, console output
+print("\nSet Iteration")
+set1 = {1, 2, 3, 4, 5, 6}
+for i in set1:
+    print(i),
