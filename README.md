@@ -274,7 +274,7 @@ print(a)        |   print(a)
 
 ## DATA TYPE
 
-![Logo](/pythonSS/dataTypes.jpg)
+![Logo](pythonSS/dataTypes.jpg)
 
 ## Flow Control
 ### Comparison operators
@@ -544,6 +544,25 @@ match value:
     ...
   case _: # you can implement a fall-through like this
     ...
+````
+##  function 
+![Logo](pythonSS/function1.jpg)
+````
+def myFunction(say): #you can add variables to the function
+  print(say)
+
+myFunction("Hello")
+
+age = input("How old are you?")
+
+myFunction("You are {} years old!".format(age))
+
+#this is what you get:
+
+Hello
+How old are you?
+>>11 #lol my real age actually
+You are 11 years old!
 ````
 
 
