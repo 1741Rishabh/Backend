@@ -1,4 +1,12 @@
-print("\nSet Iteration")
-set1 = {1, 2, 3, 4, 5, 6}
-for i in set1:
-    print(i),
+def div(x,y):
+    print(x/y)
+
+
+try:
+    div(2,1)
+except ZeroDivisionError as e:
+    print(e)
+except Exception as e:
+    print("something went wrong")
+
+

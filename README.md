@@ -564,6 +564,252 @@ How old are you?
 >>11 #lol my real age actually
 You are 11 years old!
 ````
+## Function and variable scope
+![Logo](pythonSS/function2.jpg)
+It is essential to understand the levels of scope in Python and how things can be accessed from the four different scope levels. Below are the four scope levels and a brief explanation of where and how they are used.
+
+### 1. Local scope
+Local scope refers to a variable declared inside a function. For example, in the code below, the variable total is only available to the code within the get_total function. Anything outside of this function will not have access to it.
+````
+def get_total(a, b):
+    #local variable declared inside a function
+    total = a + b;
+    return total
+
+print(get_total(5, 2))
+7
+
+# Accessing variable outside of the function:
+print(total)
+NameError: name 'total' is not defined
+````
+## 2. Enclosing scope
+Enclosing scope refers to a function inside another function or what is commonly called a nested function. 
+
+In the code below, I added a nested function called double_it to the get_total function. 
+
+As double_it is inside the scope for the get_total function it can then access the variable. However, the enclosed variable inside the double_it function cannot be accessed from inside the get_total function.
+````
+def get_total(a, b):
+    #enclosed variable declared inside a function
+    total = a + b
+
+    def double_it():
+        #local variable
+        double = total * 2
+        print(double)
+
+    double_it()
+    #double variable will not be accessible
+    print(double)
+
+    return total
+````
+## 3. Global scope
+Global scope is when a variable is declared outside of a function. This means it can be accessed from anywhere. 
+
+In the code below, I  added a global variable called special. This can then be accessed from both functions get_total and double_it:
+````
+
+special = 5
+
+def get_total(a, b):
+    #enclosed scope variable declared inside a function
+    total = a + b
+    print(special)
+
+    def double_it():
+        #local variable
+        double = total * 2
+        print(special)
+
+    double_it()
+
+    return total
+````
+## 4. Built-in scope
+Built-in scope refers to the reserved keywords that Python uses for its built-in functions, such as print, def, for, in, and so forth.  Functions with built-in scope can be accessed at any level.
+
+## What are data structures?
+This reading introduces you to data structures. So far, you have only stored small bits of data in a variable. This was either an integer, Boolean or a string. 
+
+But what happens if you need to work with more complex information, such as a collection of data like a list of people or a list of companies? 
+
+Data structures are designed for this very purpose.
+![Logo](pythonSS/DS1.jpg)
+
+A data structure allows you to organize and arrange your data to perform operations on them. Python has the following built-in data structures: List, dictionary, tuple and set. These are all considered non-primitive data structures, meaning they are classed as objects, this will be explored later in the course. 
+
+Along with the built-in data structures, Python allows users to create their own. Data structures such as Stacks, Queues and Trees can all be created by the user. 
+
+Each data structure can be designed to solve a particular problem or optimize a current solution to make it much more performant.
+
+## Mutability and Immutability
+Data Structures can be mutable or immutable. The next question you may ask is, what is mutability? Mutability refers to data inside the data structure that can be modified. For example, you can either change, update, or delete the data when needed. A list is an example of a mutable data structure. The opposite of mutable is immutable. An immutable data structure will not allow modification once the data has been set. The tuple is an example of an immutable data structure.
+## list
+````
+rishabh_marks = [100,100,100,99]
+
+# way to print list 
+print(*rishabh_marks)                           # 100 100 100 99
+print(rishabh_marks)                            # [100, 100, 100, 99]
+
+# Add element at the end
+rishabh_marks.append(1741)
+print(rishabh_marks)                            # [100, 100, 100, 99, 1741]
+
+# Add element at a index
+rishabh_marks.insert(10,88) 
+print(rishabh_marks)                            # 100 100 100 99 1741 88
+
+# add more then 2 element at the end of the array
+rishabh_marks.extend([10,20,30])
+print(rishabh_marks)                            # [100, 100, 100, 99, 1741, 88, 10, 20, 30]
+````
+### Removed Element from the list
+
+````
+rishabh_marks = [100,98,97,99]
+
+rishabh_marks.pop(1)
+print(rishabh_marks)            #[100, 97, 99]
+
+del rishabh_marks[0]
+print(rishabh_marks)            #[97, 99]
+````
+### ITERATE
+````
+rishabh_marks = [100,98,97,99]
+
+for x in rishabh_marks:
+    print(x)
+````
+
+## Tuples in Python
+Python Tuple is a collection of objects separated by commas. In some ways, a tuple is similar to a list in terms of indexing, nested objects, and repetition but a tuple is immutable, unlike lists which are mutable.
+
+````
+var = ("Geeks", "for", "Geeks")
+print(var)
+````
+## Accessing Values in Python Tuples
+ ### Method 1: Using Positive Index
+````
+friends_name =("rishabh","kumar","sadaf","rohit","dinesh","sakshi","maghna")
+print(friends_name[1])
+````
+## Concatenation of Python Tuples
+To concatenate the Python tuple we will use plus operators(+).
+
+## Nesting of Python Tuples
+````
+# Code for creating nested tuples
+
+tuple1 = (0, 1, 2, 3)
+tuple2 = ('python', 'geek')
+tuple3 = (tuple1, tuple2)
+print(tuple3)
+````
+## Slicing Python Tuples
+````
+# code to test slicing
+
+tuple1 = (0 ,1, 2, 3)
+print(tuple1[1:]) .    //(1, 2, 3)
+print(tuple1[::-1]) .  //(3, 2, 1, 0)
+print(tuple1[2:4])     //(2, 3) 
+````
+##  Converting list to a Tuple
+````
+# Code for converting a list and a string into a tuple
+
+list1 = [0, 1, 2]
+print(tuple(list1))                        //(0, 1, 2)
+print(tuple('python')) # string 'python'   //('p', 'y', 't', 'h', 'o', 'n')
+````
+# Sets in Python
+A Set is an unordered collection data type that is iterable, mutable and has no duplicate elements. 
+
+````
+    - Set are represented by { } (values enclosed in curly braces)
+    - This is based on a data structure known as a hash table. Since sets are unordered, we cannot access items using indexes like we do in lists.
+
+    student_position = {1,2,3,5}
+    print(student_position)         //{1, 2, 3, 5}
+````
+## ADD ELEMENT IN SET
+````
+    student_position.add("rishabh")
+    print(student_position)             //{1, 2, 3, 5, 'rishabh'}
+````
+## Methods for Sets
+-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# What are exceptions
+### Handle single exception
+````
+def div(x,y):
+    print(x/y)
+
+try:
+    div(2,0)
+except:
+    print("error is come")
+
+````
+
+````
+def div(x,y):
+    print(x/y)
+
+
+try:
+    div(2,0) 
+except Exception as e:
+    print(e)
+
+````
+### Handle Multiple line exception
+````
+def div(x,y):
+    print(x/y)
+
+
+try:
+    div(2,1)
+except ZeroDivisionError as e:
+    print(e)
+except Exception as e:
+    print("something went wrong")
+````
+
+
+# Types of Errors
+- IndexError
+- ZeroDivisionError
+- FileNotFoundError
+
+
+
+
+
+
+
 
 
 
