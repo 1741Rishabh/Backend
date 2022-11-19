@@ -907,9 +907,32 @@ Downtime or issues in production is damaging for a company as it does not instil
 
 o edit files in bash you have quiet a few options. The most common though is usually VI or Vim. VI stands for visual editor and it allows you to make edits and changes to a file and save them. Its very similar to what you may have used in applications like word. VIM is a better version of VI with some improvements - hense its name visual editor improved. Learning the different commands in Vim will feel a bit different coming from GUI applications but once you practice it will feel like second nature. Vim uses modes to determine the commands you can work with:
 
+```
 - Normal mode: Default mode
 - Insert mode: Allows the contents of the files to be edited.
- Command line mode: Normal commands begin with :
+- Command line mode: Normal commands begin with :
+```
+- cat           => Allows reading or concatenation of a file
+- less          => Displays the contents of a file one page at a time.
+- grep          => Global regular expression, allows for searching contents of files or folders
+
+### Man Pages
+When first starting to learn commands from bash it can feel a bit dauting. Luckily every command comes with its own manual or man pages for short. The man page will list all the flags and options that a particular command has to offer. Again, lets use the ls command to demonstrate this. Type the following:
+
+- man ls
+
+### How to create Script 
+````
+vim testshell.sh         ==> create file and write bash command in it
+
+#!/bin/bash
+echo "hello world"
+````
+### now the change the mode of file to Execute
+- chmod 755 filename.sh
+
+
+
 
 
 
