@@ -894,6 +894,7 @@ Downtime or issues in production is damaging for a company as it does not instil
 - cd Documents/     => change Directory
 - cd ..             ==> move back to Directory
 - mkdir word-docs   ==> make directory
+- mkdir -p dir2/dir3     ==> and press Enter. We're using the -p flag to create the parent directories if they do not exist. In this case it will create the dir2 directory and then create the dir3 directory inside of dir2.
 - history           ==> show command history
 ![img](git/ss7.png)
 ![img](git/ss8.png)
@@ -930,6 +931,10 @@ echo "hello world"
 ````
 ### now the change the mode of file to Execute
 - chmod 755 filename.sh
+
+
+
+
 
 
 
