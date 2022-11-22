@@ -932,6 +932,36 @@ echo "hello world"
 ### now the change the mode of file to Execute
 - chmod 755 filename.sh
 
+# Pipes
+A coding tool that allows the output of one command to be used as the input for a different command
+- cat hello.txt | wc
+## Redirection 
+![img](git/ss9.png)
+
+## Grep
+- grep R hello.txt
+
+
+# Git/GitHub
+![img](git/ss10.png)
+![img](git/ss11.png)
+![img](git/ss12.png)
+
+## Git diff
+- git diff filename
+- git log --pretty=oneline
+- git diff feaaee2db3a0191fd3eba9f5234a98f8a784c4a1 a9d0d010a95d4512a08db7d9de99930032cff1f6
+
+## Blame
+![img](git/ss13.png)
+- git blame run.txt
+- git log -p smallhash
+
+
+
+
+
+
 
 
 
